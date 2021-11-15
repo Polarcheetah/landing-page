@@ -16,6 +16,34 @@ body {
     font-family: $font-text;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section {
+    padding: 100px;
+}
+
+.section-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    font-family: $font-title;
+    text-align: center;
+    font-style: italic;
+    color: #535c68;
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+
 /* Splash */
 
 .splash {
@@ -127,3 +155,54 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
+
+/*Services*/
+.services .col-3 {
+    min-width: 200px;
+    text-align: center;
+    //position: relative;
+    //min-height: 1140px;
+    max-width: 33%;
+    padding: 0 18px;
+}
+
+
+
+.services .icons {
+    font-size: 0;
+    width: 72px;
+    height: 72px;
+    border: 3px solid $color-main;
+    border-radius: 50%;
+   // background-color: inherit;
+    text-align: center;
+    //padding-top: 20px;
+    margin: 0 auto;
+}
+
+
+.services i{
+    font-size: 36px;
+    color: $color-main;
+    padding-top: 18px;
+
+}
+
+.services h4 {
+    font-family: $font-text;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.services p {
+    font-family: $font-title;
+    font-size: 15px;
+    line-height: 20px;
+    color:#000;
+    font-style: normal;
+}
+
+
+
+
+
