@@ -1,4 +1,5 @@
 /*Variables*/
+
 $font-title: 'Lora', 'Arial', serif;
 $font-text: 'Montserrat', 'Arial', sans-serif;
 $color-text1: #fff;
@@ -54,7 +55,7 @@ section {
      background-size: cover;
      background-attachment: fixed;
      min-height: 700px; 
-    text-align: center;
+     text-align: center;
  }
 
  .splash::after {
@@ -84,8 +85,6 @@ section {
     width: 72px;
 }
 
-
-
 .navigation {
     position: absolute;
     width: 100%;
@@ -99,10 +98,9 @@ section {
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
-
-.navigation li {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
 .navigation a {
@@ -158,16 +156,12 @@ section {
 }
 
 /*Services*/
-.services .col-4 {
+
+.services .column {
     min-width: 200px;
     text-align: center;
-    //position: relative;
-    //min-height: 1140px;
-
     padding: 0 18px;
 }
-
-
 
 .services .icons {
     font-size: 0;
@@ -175,18 +169,14 @@ section {
     height: 72px;
     border: 3px solid $color-main;
     border-radius: 50%;
-   // background-color: inherit;
     text-align: center;
-    //padding-top: 20px;
     margin: 0 auto;
 }
-
 
 .services i{
     font-size: 36px;
     color: $color-main;
     padding-top: 18px;
-
 }
 
 .services h4 {
@@ -211,6 +201,7 @@ section {
 
 .portfolio .col-4 {
     padding: 0px 15px 24px;
+    min-width: 250px;
 }
 
 .portfolio img {
@@ -219,6 +210,7 @@ section {
     object-fit: cover;
     vertical-align: middle;
 }
+
 .portfolio .card-body {
     background-color: #fff;
     text-align: center;
@@ -249,9 +241,10 @@ footer {
     margin: 28px auto 28px;
 }
 
-footer p{
+footer p {
     margin-top: 30px;
     font-size: 14px;
+    text-align: center;
 }
 footer .row {
     display: flex;
@@ -260,6 +253,9 @@ footer .row {
     justify-content: left;
 }
 
+footer .col-4 {
+    min-width: 300px;
+}
 footer ul {
     display: flex;
     justify-content: center;
@@ -281,6 +277,72 @@ footer li {
 footer li i {
     font-size: 18px;
     color: #fff;
+}
+
+/*Media*/
+
+@media(max-width: 768px){
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .page-title {
+        font-size: 36px;
+        margin-top: 150px;
+    }
+
+    .page-subtitle {
+        font-size: 56px;
+    }
+
+    .splash-inner {
+        max-width: 90%;
+    }
+
+    .navigation a {
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    .navigation ul {
+        margin: 50px 0 0 0;
+        justify-content: center;
+    }
+
+    .navigation li {
+        flex: 1 0 0;
+    }
+
+    .btn {
+        margin-top: 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .services .column {
+        margin-bottom: 36px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+    footer .row {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .navigation a {
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    .services .column {
+        margin-bottom: 36px;
+    }
 }
 
 
